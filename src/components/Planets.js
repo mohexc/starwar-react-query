@@ -6,7 +6,7 @@ import { Skeleton, Pagination } from 'antd'
 
 const fetchPlanets = async (key, greeting, page) => {
     console.log(greeting)
-    const res = await fetch(`http://swapi.dev/api/planets/?page=${page}`)
+    const res = await fetch(`https://swapi.dev/api/planets/?page=${page}`)
     return res.json()
 }
 
