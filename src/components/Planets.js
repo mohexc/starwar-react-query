@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import "./Planets.less"
 import { useQuery } from "react-query"
 import Planet from './Planet'
-import { Skeleton, Pagination, message } from 'antd'
+import { Skeleton, Pagination } from 'antd'
 
 const fetchPlanets = async (key, greeting, page) => {
     console.log(greeting)
