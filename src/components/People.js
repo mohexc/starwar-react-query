@@ -20,7 +20,13 @@ const People = () => {
             <h2>People</h2>
             <Button disabled={page === 1} className="btn-lift" type="primary" onClick={() => setPage(old => Math.max(old - 1, 1))}>Previous page</Button>
             <span style={{ marginLeft: "1rem", marginRight: "1rem" }}>{page}</span>
-            <Button disabled={!latestData || !latestData.next} className="btn-lift" type="primary" onClick={() => setPage(old => (!latestData || !latestData.next ? old : old + 1))}>Next page</Button>
+            <Button
+                loading={status === "success" ? false : true}
+                disabled={!latestData || !latestData.next}
+                className="btn-lift" type="primary"
+                onClick={() => setPage(old => (!latestData || !latestData.next ? old : old + 1))}>
+                Next page
+            </Button>
             {status === "error" && <div>Error fetching data</div>}
             {status === "loading" && <Skeleton active />}
             {status === "success" && (
