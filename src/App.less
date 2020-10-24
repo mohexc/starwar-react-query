@@ -1,1 +1,50 @@
 @import "~antd/dist/antd.less";
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #222;
+  color: #ddd;
+  text-align: center;
+}
+
+.app {
+  width: 960;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #ffff57;
+  font-size: 4em;
+  letter-spacing: 2px;
+}
+
+// button {
+//   margin: 0 10px;
+//   background: transparent;
+//   border: 3px solid #ccc;
+//   border-radius: 20px;
+//   padding: 10px;
+//   color: #333;
+//   font-size: 1.2em;
+//   cursor: pointer;
+//   &:hover {
+//     color: #fff;
+//     border-color: #fff;
+//     border: 3px solid #ccc;
+//   }
+//   &:focus {
+//     color: #fff;
+//     border-color: #fff;
+//     border: 3px solid #ccc;
+//   }
+// }
+
+.btn-lift {
+  &:hover {
+    transform: translateY(-5px);
+  }
+  &:active {
+    transform: translateY(0px);
+  }
+}

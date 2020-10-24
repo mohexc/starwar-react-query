@@ -1,9 +1,10 @@
 import React from 'react'
+import './People.less'
 
 const People = () => {
     return (
-        <div>
-
+        <div className="people">
+            People
         </div>
     )
 }

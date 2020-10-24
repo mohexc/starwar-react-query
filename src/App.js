@@ -1,20 +1,26 @@
 import React, { useState } from 'react'
 import "./App.less"
+import { ReactQueryDevtools } from 'react-query-devtools'
 import Navbar from './components/Navbar'
 import Planets from "./components/Planets"
 import People from "./components/People"
 
 // manin
 const App = () => {
-  const [page, setPage] = useState("planets")
+  const [page, setPage] = useState("Planets")
+
   return (
-    <div className="app">
-      <h1>Start Wars Info</h1>
-      <Navbar />
-      <div className="content">
-        {page === "palnets" ? <Planets /> : <People />}
+    <React.Fragment>
+
+      <div className="app">
+        <h1>Start Wars Info</h1>
+        <Navbar setPage={setPage} />
+        <div className="content">
+          {page === "Planets" ? <Planets /> : <People />}
+        </div>
       </div>
-    </div>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </React.Fragment>
   )
 }
 
